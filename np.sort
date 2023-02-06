@@ -1,0 +1,22 @@
+import numpy as np
+a1 = np.array([[1, 5, 2021,4,11,8,17,11,22],[15,11,2023,15,5,30,11,21,31]],np.int32)
+a1=np.append(a1,[4,7,2023,8,16,21,11,21,31])
+a1=np.append(a1,[1,8,2021,13,5,56,11,15,31])
+a1=np.append(a1,[3,2,2021,17,9,22,11,15,31])
+a1=np.append(a1,[1, 8, 2021,13,5,55,17,11,22])
+a1 = a1.reshape((6,9))
+
+zaehler=1;
+for zeile in a1:
+    print("a",zaehler,":",zeile,"")
+    zaehler+=1; #zaehler=zaehler+1
+
+#a1 sortieren:
+#a1=np.sort(a1,0)
+#zaehler=1;
+#sortiere bitte alle Zeilen nach der 2.Spalte, dann nach der 1.Spalte usw. Diese "umgekehrte" Reihenfolge ist
+#in der Syntax der lexsort-Funktion begründet, die den 1.Sortiersschlüssel als letztes Argument erwartet.
+sortspalten=np.lexsort((a1[:, 5], a1[:, 4], a1[:, 3], a1[:, 0], a1[:, 1], a1[:, 2]))
+print (sortspalten)
+sortiertesarray=a1[sortspalten]
+print("sortierte Messwerte:\n",a1[sortspalten])
