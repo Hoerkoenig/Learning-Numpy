@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SoundMemory — 2 Spieler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>SoundMemory — 2 Spieler</header>
+  <main>
+    <div class="pillars" id="pillars"></div>
+
+    <div class="sockel">
+      <div class="left-side">
+        <div id="score1" class="sevenseg">000</div>
+      </div>
+
+      <div class="center-side">
+        <div class="right-side">
+          <div id="score2" class="sevenseg">000</div>
+          <!-- dritter Spieler vorbereitet (sichtbar machen, wenn du 3 Spieler willst) -->
+          <div id="score3" class="sevenseg hidden">000</div>
+          <div class="avatar-placeholder">Avatar</div>
+        </div>
+      </div>
+
+      <div class="sockel-buttons">
+        <button id="btnDashboard" class="big-btn">Dashboard</button>
+        <button id="btnGiveup" class="big-btn">Aufgeben</button>
+        <button id="btnAbraxas" class="big-btn">Abraxas</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
